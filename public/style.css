@@ -1,0 +1,329 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f6f8;
+  color: #202638;
+  font-family: -apple-system, BlinkMacSystemFont,
+               "Hiragino Kaku Gothic ProN", sans-serif;
+  line-height: 1.6;
+}
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e8eaf0;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: auto;
+  padding: 17px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  color: #243f80;
+  font-size: 22px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -0.7px;
+}
+
+.brand span {
+  color: #d59b47;
+}
+
+.header-note {
+  color: #7a8292;
+  font-size: 12px;
+}
+
+.container {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 0 18px;
+}
+
+.event-card {
+  overflow: hidden;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(25, 35, 60, 0.08);
+}
+
+.event-image {
+  position: relative;
+  height: 290px;
+  background: linear-gradient(135deg, #172b54, #5a6a92);
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-label {
+  position: absolute;
+  bottom: 22px;
+  left: 28px;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.event-content {
+  padding: 36px 42px 42px;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 30px;
+  background: #e9f7ef;
+  color: #218453;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 18px 0 4px;
+  font-size: 30px;
+  line-height: 1.35;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  margin: 0;
+  color: #747d8c;
+  font-size: 14px;
+}
+
+.event-details {
+  margin: 30px 0;
+  padding: 24px 0;
+  border-top: 1px solid #eceef2;
+  border-bottom: 1px solid #eceef2;
+}
+
+.detail {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.detail + .detail {
+  margin-top: 22px;
+}
+
+.detail-icon {
+  font-size: 24px;
+}
+
+.detail small {
+  display: block;
+  color: #8a91a0;
+  font-size: 12px;
+}
+
+.detail strong {
+  display: block;
+  font-size: 16px;
+}
+
+.detail p {
+  margin: 2px 0 0;
+  color: #777f8e;
+  font-size: 13px;
+}
+
+.ticket-section h2 {
+  margin: 0 0 18px;
+  font-size: 20px;
+}
+
+.ticket-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid #dfe4ee;
+  border-radius: 14px;
+}
+
+.ticket-option strong {
+  font-size: 16px;
+}
+
+.ticket-option p {
+  margin: 3px 0;
+  color: #8a91a0;
+  font-size: 12px;
+}
+
+.ticket-price {
+  margin-top: 8px;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.counter button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #d9deea;
+  border-radius: 10px;
+  background: #f8f9fc;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.counter span {
+  min-width: 16px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.limit-note {
+  margin: 10px 2px 24px;
+  color: #8a91a0;
+  font-size: 12px;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f3f5fa;
+  border-radius: 12px;
+}
+
+.summary span {
+  font-size: 14px;
+}
+
+.summary strong {
+  font-size: 26px;
+  color: #243f80;
+}
+
+.purchase-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 58px;
+  margin-top: 22px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #243f80;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.purchase-button:hover {
+  background: #182f66;
+}
+
+.trust-note {
+  margin: 13px 0 0;
+  text-align: center;
+  color: #7b8493;
+  font-size: 12px;
+}
+
+footer {
+  padding: 28px;
+  text-align: center;
+  color: #a0a6b1;
+  font-size: 12px;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(15, 25, 45, 0.6);
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  background: white;
+  border-radius: 18px;
+}
+
+.modal-card h2 {
+  margin-top: 0;
+}
+
+.modal-summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-top: 1px solid #e8eaf0;
+  border-bottom: 1px solid #e8eaf0;
+}
+
+.demo-note {
+  color: #7b8493;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 16px auto;
+    padding: 0 12px;
+  }
+
+  .event-image {
+    height: 210px;
+  }
+
+  .event-content {
+    padding: 24px 20px 28px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .ticket-option {
+    padding: 16px;
+  }
+
+  .ticket-price {
+    font-size: 20px;
+  }
+
+  .counter {
+    gap: 8px;
+  }
+}
+
+
