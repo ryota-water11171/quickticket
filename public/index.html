@@ -1,120 +1,60 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Winter Concert 2027 | QuickTicket</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>公演を探す | QuickTicket</title>
+  <link rel="stylesheet" href="/events.css">
+  <script src="/events.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#">QuickTicket<span>.</span></a>
-      <span class="header-note">かんたんチケット購入</span>
+      <a class="brand" href="/">QuickTicket<span>.</span></a>
+      <span class="header-note">音楽との出会いを、もっと身近に。</span>
     </div>
   </header>
 
   <main class="container">
-    <article class="event-card">
-      <div class="event-image">
-        <img src="images/concert.jpg"
-             alt="演奏会のメインビジュアル"
-             onerror="this.style.display='none'">
-        <span class="image-label">LIVE CONCERT</span>
+    <section class="hero">
+      <p class="eyebrow">DISCOVER LIVE MUSIC</p>
+      <h1>あなたの街の<br>コンサートを探そう。</h1>
+      <p>心に残る演奏との出会いを、QuickTicketで。</p>
+    </section>
+
+    <section class="search-panel" aria-label="公演検索">
+      <label for="keyword">公演名・キーワード</label>
+      <input id="keyword" type="search"
+             placeholder="公演名・演奏家名など">
+
+      <div class="filters">
+        <div>
+          <label for="region">地域</label>
+          <select id="region">
+            <option value="">すべての地域</option>
+          </select>
+        </div>
+        <div>
+          <label for="genre">ジャンル</label>
+          <select id="genre">
+            <option value="">すべてのジャンル</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="events-section">
+      <div class="section-heading">
+        <h2>公演一覧</h2>
+        <span id="result-count"></span>
       </div>
 
-      <div class="event-content">
-        <span class="status">● チケット販売中</span>
-
-        <h1>Winter Concert 2027</h1>
-        <p class="subtitle">
-          心に響く、冬のクラシックコンサート
-        </p>
-
-        <section class="event-details">
-          <div class="detail">
-            <span class="detail-icon">📅</span>
-            <div>
-              <small>開催日時</small>
-              <strong>2027年1月23日（土）</strong>
-              <p>13:30 開場 / 14:00 開演</p>
-            </div>
-          </div>
-
-          <div class="detail">
-            <span class="detail-icon">📍</span>
-            <div>
-              <small>会場</small>
-              <strong>コンサートホール</strong>
-              <p>会場の詳細は後日掲載</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="ticket-section">
-          <h2>チケットを選択</h2>
-
-          <div class="ticket-option">
-            <div>
-              <strong>一般チケット</strong>
-              <p>全席自由 / 1名様</p>
-              <div class="ticket-price">¥2,000</div>
-            </div>
-
-            <div class="counter">
-              <button id="minus" type="button"
-                      aria-label="枚数を減らす">−</button>
-              <span id="count">1</span>
-              <button id="plus" type="button"
-                      aria-label="枚数を増やす">＋</button>
-            </div>
-          </div>
-
-          <p class="limit-note">一度に4枚まで購入できます</p>
-
-          <div class="summary">
-            <span>合計金額</span>
-            <strong id="total">¥2,000</strong>
-          </div>
-
-          <button id="purchase" class="purchase-button"
-                  type="button">
-            購入内容を確認する <span>→</span>
-          </button>
-
-          <p class="trust-note">
-            会員登録なしで購入できます
-          </p>
-        </section>
-      </div>
-    </article>
-
-    <footer>
-      © 2027 QuickTicket
-    </footer>
+      <p id="message" role="status">公演情報を読み込み中...</p>
+      <div id="events-list" class="events-grid"></div>
+    </section>
   </main>
 
-  <div id="modal" class="modal" hidden>
-    <div class="modal-card" role="dialog"
-         aria-modal="true"
-         aria-labelledby="modal-title">
-      <h2 id="modal-title">購入内容の確認</h2>
-      <p>Winter Concert 2027</p>
-      <div class="modal-summary">
-        <span id="confirm-count">1枚</span>
-        <strong id="confirm-total">¥2,000</strong>
-      </div>
-      <p class="demo-note">
-        これは試作品です。まだ決済は行われません。
-      </p>
-      <button id="close-modal" class="purchase-button"
-              type="button">戻る</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+  <footer>© QuickTicket</footer>
 </body>
 </html>
-
-
+EOF
