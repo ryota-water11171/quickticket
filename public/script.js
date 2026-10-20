@@ -1,4 +1,4 @@
-const ticketPrice = 2000;
+let ticketPrice = 2000;
 const maxTickets = 4;
 
 let quantity = 1;
@@ -57,4 +57,15 @@ modal.addEventListener("click", (event) => {
 updateDisplay();
 
 
+document.addEventListener("quickticket:detail-loaded", () => {
+  const price = window.quickTicketPrice;
 
+  if (!Number.isSafeInteger(price) || price < 0) {
+    console.error("Invalid ticket price:", price);
+    return;
+  }
+
+  ticketPrice = price;
+  quantity = 1;
+  updateDisplay();
+});
