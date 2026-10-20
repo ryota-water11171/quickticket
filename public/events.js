@@ -67,7 +67,7 @@ function createEventCard(event) {
 
   const link = document.createElement("a");
   link.className = "detail-link";
-  link.href = "/event.html";
+  link.href = `/events.html?id=${encodeURIComponent(event.id)}`;
   link.textContent = "公演詳細を見る →";
 
   content.append(genre, title, date, venue, price, link);
@@ -145,4 +145,4 @@ regionSelect.addEventListener("change", renderEvents);
 genreSelect.addEventListener("change", renderEvents);
 
 loadEvents();
-EOF
+
